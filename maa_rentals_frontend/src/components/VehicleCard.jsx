@@ -28,7 +28,7 @@ export default function VehicleCard({ vehicle, startDate, endDate }) {
       <img
         src={vehicle.image_url || "/placeholder.png"}
         alt={vehicle.title}
-        className="h-40 w-full object-cover rounded"
+        className="h-50 w-full object-cover rounded"
       />
       <h3 className="text-lg font-bold mt-2">
         {vehicle.brand} - {vehicle.title}
