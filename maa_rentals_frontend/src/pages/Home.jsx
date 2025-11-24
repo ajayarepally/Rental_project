@@ -410,31 +410,33 @@ function Home() {
         </section>
 
         {/* MAP SECTION */}
-        <section id="call-section">
-          <h2 className="text-3xl font-bold mb-4">📍 Our Store Location</h2>
-          <a href="https://maps.app.goo.gl/u2z6ktKEEXHwzM1e8" target="_blank">
-            <MapContainer
-              center={[storeLocation.lat, storeLocation.lng]}
-              zoom={18}
-              scrollWheelZoom
-              style={{ height: "400px", width: "100%" }}
-            >
-              <TileLayer
-                url="http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}"
-                subdomains={["mt0", "mt1", "mt2", "mt3"]}
-              />
-              <Marker position={[storeLocation.lat, storeLocation.lng]}>
-                <Popup>{storeLocation.name}</Popup>
-              </Marker>
-            </MapContainer>
-          </a>
-
-          <a href="https://maps.app.goo.gl/u2z6ktKEEXHwzM1e8" target="_blank">
-            <button className="bg-cyan-900 mt-4 px-4 py-2 rounded-lg text-white hover:bg-cyan-800">
-              🚩 Click to Navigate
-            </button>
-          </a>
-        </section>
+         <div id="call-section">
+           <h2 className="text-2xl font-bold mb-4">Our Store Location</h2>
+           <a href="https://maps.app.goo.gl/u2z6ktKEEXHwzM1e8" target="blank">
+             <MapContainer
+               center={[storeLocation.lat, storeLocation.lng]}
+               zoom={20}
+               scrollWheelZoom={true}
+               dragging={true}
+               style={{ height: "400px", width: "100%", zIndex: 0 }}
+             >
+               <TileLayer
+                 url="http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}"
+                 subdomains={["mt0", "mt1", "mt2", "mt3"]}
+                 attribution='&copy; <a href="https://www.google.com/maps">Google Maps</a>'
+               />
+               <Marker position={[storeLocation.lat, storeLocation.lng]}>
+                 <Popup>{storeLocation.name}</Popup>
+               </Marker>
+             </MapContainer>
+           </a>
+           <a href="https://maps.app.goo.gl/u2z6ktKEEXHwzM1e8" target="blank">
+             <button className="bg-cyan-900 mt-3 p-2 rounded-lg text-white">
+               🚩 Click to Navigate...
+             </button>
+           </a>
+         </div>
+       </div> 
 
         {/* CONTACT BANNER */}
         <motion.div
