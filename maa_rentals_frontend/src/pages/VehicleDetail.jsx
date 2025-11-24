@@ -91,7 +91,7 @@ export default function VehicleDetail() {
           <img
             src={vehicle.image_url || "/placeholder.png"}
             alt={vehicle.title}
-            className="w-full h-72 object-cover rounded-lg shadow-md"
+            className="w-full h-full object-cover rounded-lg shadow-md"
           />
         </div>
 
