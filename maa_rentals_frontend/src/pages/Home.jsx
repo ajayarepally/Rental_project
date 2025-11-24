@@ -436,7 +436,6 @@ function Home() {
              </button>
            </a>
          </div>
-       </div> 
 
         {/* CONTACT BANNER */}
         <motion.div
