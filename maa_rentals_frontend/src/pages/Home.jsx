@@ -322,7 +322,7 @@ function Home() {
   // Fetch Vehicles
   useEffect(() => {
     axios
-      .get("https://rental-project-idta.onrender.com/api/vehicles/")
+      .get("https://vehicle-rent-gn1d.onrender.com/api/vehicles/")
       .then((res) => {
         const data = res.data;
         setVehicles(data.slice().reverse()); // Recent first
